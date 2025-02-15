@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Day 1: Foundations and Key Concepts",
+    "date": "2025-02-19",
+    "padding": 240,
+    "events": [
+      { "time": "08:30", "title": "Check-in" },
+      { "time": "09:00", "title": "Opening Ceremony" },
+      { "time": "09:30", "title": "Introduction to AI and Machine Learning" },
+      { "time": "11:30", "title": "Natural Language Processing (NLP)" },
+      { "time": "14:00", "title": "Introduction to Neural Networks" },
+      { "time": "20:00", "title": "Advanced Programming with Python (Online)" }
+    ]
+  },
+  {
+    "title": "Day 2: Advanced Topics and Practical Applications",
+    "date": "2025-02-20",
+    "padding": 350,
+    "events": [
+      { "time": "08:30", "title": "Check-in" },
+      { "time": "09:00", "title": "NLP with Transformers" },
+      { "time": "13:30", "title": "Computer Vision with Transformers" },
+      { "time": "15:30", "title": "Closing Ceremony & Datathon Kickoff" }
+    ]
+  },
+  {
+    "title": "Day 3: Online Datathon",
+    "date": "2025-02-21",
+    "padding": 460,
+    "events": [
+      { "time": "09:00", "title": "Datathon Challenge Release" },
+      { "time": "10:00", "title": "Virtual Mentoring Sessions Begin" },
+      { "time": "24h", "title": "Continuous Development" }
+    ]
+  },
+  {
+    "title": "Day 4: Final Submissions",
+    "date": "2025-02-22",
+    "padding": 390,
+    "events": [
+      { "time": "00:00", "title": "Continued Development" },
+      { "time": "08:00", "title": "Last Call for Submissions" },
+      { "time": "09:00", "title": "Submission Deadline" },
+      { "time": "16:00", "title": "Winners Announcement" }
+    ]
+  }
+]
