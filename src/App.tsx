@@ -5,15 +5,15 @@ export default function App(): React.ReactElement {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024); // Adjust breakpoint as needed
-    };
+  const handleResize = () => {
+    setIsMobile(window.matchMedia("(max-width: 1024px)").matches);
+  };
 
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
+  window.addEventListener("resize", handleResize);
+  handleResize(); // فحص فوري عند التحميل
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   return (
     <>
