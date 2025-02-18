@@ -2,6 +2,31 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html {
+  padding: 0;
+  /* Set width to device width minus 100px */
+  height: 100vh;
+  /* Full height of the viewport */
+  display: flex;
+  /* Enable Flexbox layout */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  /* Prevent horizontal scrolling */
+  overflow-y: auto;
+  /* Allow vertical scrolling */
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-items: center
+}
+
 @import "@fontsource/jetbrains-mono";
 @import "@fontsource/plus-jakarta-sans";
 
@@ -9,14 +34,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  justify-content: center;
-  align-items: center;
   display: flex;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0d0d1d;
-  margin: 0;
-  padding: 0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,16 +49,20 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+body {}
+
+@media (max-width: 1024px) {
+  html {
+    margin-top: 10vh;
+    width: 80vh;
+  }
+
+  /* Apply the margin only on smaller screens (max-width: 1024px) */
 }
 
 h1 {
@@ -59,20 +84,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
