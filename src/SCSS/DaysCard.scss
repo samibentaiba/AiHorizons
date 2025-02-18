@@ -1,6 +1,6 @@
 @mixin center($justify: false, $align: false, $display: false) {
   @if $display !=false {
-    @apply flex;
+    @apply inline-#{$display};
   }
 
   @if $justify !=false {
