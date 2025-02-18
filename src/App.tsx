@@ -16,13 +16,8 @@ export default function App(): React.ReactElement {
 }, []);
 
   return (
-    <>
       <div className="flex justify-center items-center w-full">
         <Home />
       </div>
-      {!isMobile && (
-        <section className="w-full mt-10 flex justify-center"></section>
-      )}
-    </>
   );
 }
