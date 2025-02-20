@@ -8,6 +8,7 @@ html {
   height: 100vh;
   /* Full height of the viewport */
   display: flex;
+  margin-top: 5vh;
   /* Enable Flexbox layout */
   justify-content: center;
   /* Center horizontally */
@@ -27,8 +28,6 @@ body {
   justify-items: center
 }
 
-@import "@fontsource/jetbrains-mono";
-@import "@fontsource/plus-jakarta-sans";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -58,7 +57,7 @@ body {}
 
 @media (max-width: 1024px) {
   html {
-    margin-top: 10vh;
+    margin-top: 0vh;
     width: 80vh;
   }
 

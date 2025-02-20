@@ -13,12 +13,13 @@
 }
 
 .card {
-  @apply w-[556px] max-w-[90%] min-h-[50vh] overflow-hidden flex-wrap mx-auto;
+  @apply max-w-[100%] min-h-[50vh] overflow-hidden flex-wrap mx-auto;
 }
 
 body {
   background-color: #0d0d1d;
 }
+
 // Card component styles
 .card {
   @include center(center, center, flex);
@@ -118,9 +119,9 @@ body {
 }
 
 // Responsive Screen
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .card {
-    @apply px-[5%] translate-y-[5%];
+    @apply px-[0%] translate-y-[5%];
 
     .card-option {
       .order {

@@ -1,11 +1,11 @@
-import Eclipse from "./aihorizons-card-camponents/Eclipse.tsx";
-import BgCard from "./aihorizons-card-camponents/bg-card.tsx";
+import Eclipse from "./ui/Eclipse.tsx";
+import BgCard from "./ui/bg-card.tsx";
 import Edition from "./aihorizons-card-camponents/Edition.tsx";
 import BinaryDecoration from "./aihorizons-card-camponents/binary-decoration";
 export default function EditionCard() {
   return (
-    <BgCard>
-      <div className="feature-card-container">
+    <BgCard isMiddle={true}>
+      <div className="relative w-[100%] h-[100%]">
         <div className="absolute left-[94px] top-[235px]">
           <BinaryDecoration />
         </div>

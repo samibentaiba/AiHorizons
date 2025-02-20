@@ -13,23 +13,26 @@ function EventDetails() {
 
 export default function ComingsoonComponent() {
   return (
-    <div
-      className="w-full max-w-[622px] min-w-[350px] h-[396px] flex flex-col justify-between items-start p-6 sm:p-8 rounded-2xl"
-      style={{
-        border: "1px solid rgba(255, 255, 255, 0.05)",
-        background:
-          "radial-gradient(200.24% 242.87% at 217.75% 107.58%, rgba(0, 173, 235, 0.30) 0%, rgba(2, 35, 78, 0.00) 100%), #02234E",
-      }}
-    >
-      <div className="space-y-4 mb-8">
-        <Logo />
-        <div className="text-white text-2xl sm:text-4xl font-semibold leading-tight">
-          Learn, build, and compete with 2 days of expert AI workshops and an
-          online datathon!
-        </div>
-      </div>
 
-      <EventDetails />
+    <div className="w-full max-w-[622px]">
+      <div
+        className="w-full max-w-[622px] min-w-[350px] h-[396px] flex flex-col justify-between items-start p-6 sm:p-8 rounded-2xl"
+        style={{
+          border: "1px solid rgba(255, 255, 255, 0.05)",
+          background:
+            "radial-gradient(200.24% 242.87% at 217.75% 107.58%, rgba(0, 173, 235, 0.30) 0%, rgba(2, 35, 78, 0.00) 100%), #02234E",
+        }}
+      >
+        <div className="space-y-4 mb-8">
+          <Logo />
+          <div className="text-white text-2xl sm:text-4xl font-semibold leading-tight">
+            Learn, build, and compete with 2 days of expert AI workshops and an
+            online datathon!
+          </div>
+        </div>
+
+        <EventDetails />
+      </div>
     </div>
   );
 }

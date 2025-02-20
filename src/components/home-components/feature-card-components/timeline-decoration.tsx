@@ -1,4 +1,24 @@
-export default function TimelineDecoration() {
+function ColorsPallet({ direction = "right" }: FeatureCardProps) {
+  const color = direction == "right" ? "#00adeb" : "#FD8240";
+
+  return (
+    <div className="w-[73.38px] h-[140.88px] relative">
+      <div className={`w-2.5 h-2.5 left-[3px] top-[33px] absolute opacity-60 bg-[${color}] rounded-full border-t border-b border-white/20`} />
+      <div className="w-3.5 h-3.5 left-[1px] top-[126px] absolute">
+        <div className={`w-3.5 h-3.5 left-0 top-0 absolute bg-[${color}] rounded-full border-t border-b border-white/20 blur-[27.70px]`} />
+        <div className={`w-2.5 h-2.5 left-[2px] top-[2px] absolute bg-[${color}] rounded-full border-t border-b border-white/20`} />
+      </div>
+      <div className="w-1.5 h-[31px] left-[33px] top-[44px] absolute">
+        <div className={`w-1.5 h-[31px] left-0 top-0 absolute bg-[${color}] rounded-full blur-[16.70px]`} />
+        <div className={`w-1 h-5 left-[1px] top-[4px] absolute bg-[${color}] rounded-full border-t border-b border-white/20`} />
+      </div>
+    </div>
+  );
+}
+interface FeatureCardProps {
+  direction?: "left" | "right";
+}
+export default function TimelineDecoration({ direction }: FeatureCardProps) {
   return (
     <div className="w-[73.38px] h-[140.88px] relative">
       <div data-svg-wrapper className="left-0 top-0 absolute">
@@ -82,15 +102,8 @@ export default function TimelineDecoration() {
           </defs>
         </svg>
       </div>
-      <div className="w-2.5 h-2.5 left-[3px] top-[33px] absolute opacity-60 bg-[#00adeb] rounded-full border-t border-b border-white/20" />
-      <div className="w-3.5 h-3.5 left-[1px] top-[126px] absolute">
-        <div className="w-3.5 h-3.5 left-0 top-0 absolute bg-[#00adeb] rounded-full border-t border-b border-white/20 blur-[27.70px]" />
-        <div className="w-2.5 h-2.5 left-[2px] top-[2px] absolute bg-[#00adeb] rounded-full border-t border-b border-white/20" />
-      </div>
-      <div className="w-1.5 h-[31px] left-[33px] top-[44px] absolute">
-        <div className="w-1.5 h-[31px] left-0 top-0 absolute bg-[#00adeb] rounded-full blur-[16.70px]" />
-        <div className="w-1 h-5 left-[1px] top-[4px] absolute bg-[#00adeb] rounded-full border-t border-b border-white/20" />
-      </div>
+      <ColorsPallet direction={direction} />
     </div>
-  );
+  )
 }
+

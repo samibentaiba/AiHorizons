@@ -1,5 +1,6 @@
 export default function FeatureButton() {
-  return (<div data-svg-wrapper>
+  return (
+  <div data-svg-wrapper>
       <svg
         width="52"
         height="52"
@@ -85,5 +86,6 @@ export default function FeatureButton() {
           />
         </defs>
       </svg>
-    </div>  );
+    </div>
+    );
 }

@@ -1,25 +1,28 @@
 import styled from "styled-components";
-const MaskedDiv = styled.div`
+const MaskedDiv = styled.div<{ direction: "left" | "right" }>`
   -mask-image: radial-gradient(
-    circle at top right,
+    circle at top ${(props) => props.direction},
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 1) 25%,
-    rgba(0, 0, 0, 1) 60%
+    rgba(0, 0, 0, ${(props) => (props.direction === "right" ? "1" : "0")}) 60%
   );
   mask-image: radial-gradient(
-    circle at top right,
+    circle at top ${(props) => props.direction},
     rgba(0, 0, 0, 0) 5%,
     rgba(0, 0, 0, 1) 25%,
     rgba(0, 0, 0, 0) 60%
   );
-  );
-
 `;
-export default function BinaryDecoration() {
+
+interface BinaryDecorationProps {
+  direction?: "left" | "right";
+}
+
+export default function BinaryDecoration({ direction = "right" }: BinaryDecorationProps) {
   return (
-    <div className="w-[73.38px] h-[140.88px] relative">
+    <div className={`relative w-[73.38px] h-[${direction == "right" ? "140" : "50"}.88px]`}>
       <div data-svg-wrapper className="left-0 top-0 absolute">
-        <MaskedDiv>
+        <MaskedDiv direction={direction} >
           <svg
             width="359"
             height="177"
