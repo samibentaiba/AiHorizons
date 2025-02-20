@@ -1,3 +1,9 @@
+import React from "react";
+import Home from "./components/Home";
+import Days from "./components/Days";
+import Hero from "./assets/image.png";
+import Blur from "./assets/blur.png";
+import { useState, useEffect } from "react";
 export default function App(): React.ReactElement {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -6,7 +12,6 @@ export default function App(): React.ReactElement {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log("hello world")
 
   return (
     <div className="flex justify-center items-center w-full min-h-screen">
@@ -38,9 +43,3 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ src, alt }) => {
     />
   );
 };
-import React from "react";
-import Home from "./components/Home";
-import Days from "./components/Days";
-import Hero from "./assets/image.png";
-import Blur from "./assets/blur.png";
-import { useState, useEffect } from "react";
