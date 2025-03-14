@@ -11,7 +11,7 @@ html {
   align-items: center;
   overflow-y: auto;
   scroll-behavior: smooth;
-  zoom: 100%; /* Ensure 100% zoom */
+  zoom: 40%; /* Ensure 100% zoom */
 }
 
 body {
