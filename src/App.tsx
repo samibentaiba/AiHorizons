@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Home from "./components/Home";
 import Days from "./components/Days";
 import Hero from "./assets/image.png";
 import Blur from "./assets/blur.png";
-import { useState, useEffect } from "react";
+
 export default function App(): React.ReactElement {
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Force zoom reset function
+  useEffect(() => {
+    const resetZoom = () => {
+      document.body.style.zoom = "reset"; // Reset zoom for all browsers
+      document.documentElement.style.zoom = "100%"; // Set default zoom level
+    };
+
+    resetZoom(); // Apply on mount
+    window.addEventListener("resize", resetZoom); // Reapply on resize
+
+    return () => {
+      window.removeEventListener("resize", resetZoom);
+    };
   }, []);
 
   return (
@@ -25,10 +41,12 @@ export default function App(): React.ReactElement {
     </div>
   );
 }
+
 interface BackgroundImageProps {
   src: string;
   alt: string;
 }
+
 const BackgroundImage: React.FC<BackgroundImageProps> = ({ src, alt }) => {
   return (
     <img
