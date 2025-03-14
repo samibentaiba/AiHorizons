@@ -4,17 +4,41 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/Symbol 2.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <title>AiHorizon</title>
+  
   <script>
-    function resetZoom() {
-      document.body.style.zoom = "reset"; // Works in most browsers
-      document.documentElement.style.zoom = "100%"; // Ensures zoom is 100%
-    }
+    document.addEventListener("wheel", function (event) {
+      if (event.ctrlKey) {
+        event.preventDefault(); // Prevent zooming via Ctrl + Scroll
+      }
+    }, { passive: false });
 
-    window.onload = resetZoom;
-    window.addEventListener("resize", resetZoom);
+    document.addEventListener("keydown", function (event) {
+      if (event.ctrlKey && (event.key === "+" || event.key === "-" || event.key === "0")) {
+        event.preventDefault(); // Prevent zooming via keyboard shortcuts
+      }
+    });
+
+    document.addEventListener("gesturestart", function (event) {
+      event.preventDefault(); // Prevent pinch-to-zoom on iOS
+    });
+
+    document.addEventListener("gesturechange", function (event) {
+      event.preventDefault();
+    });
+
+    document.addEventListener("gestureend", function (event) {
+      event.preventDefault();
+    });
   </script>
+
+  <style>
+    html, body {
+      touch-action: manipulation; /* Prevents double-tap zoom */
+      overflow-x: hidden; /* Avoids accidental scrolling */
+    }
+  </style>
 </head>
 
 <body>
